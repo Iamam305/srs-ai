@@ -24,7 +24,7 @@ export const POST = async (req: NextRequest) => {
       // stream: true,
       messages: [{ role: "user", content: prompt }],
     });
-    console.log(response.choices[0].message.content);
+     // console.log(response.choices[0].message.content);
 
     const newSrsDoc = new Srs({
       appName: name,

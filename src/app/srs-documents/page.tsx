@@ -12,7 +12,7 @@ const Page = () => {
   const getDocs = async () => {
     const res = await axios.get("/api/srs-document");
     setDocs(res.data.srsDocs);
-    console.log(res);
+    // console.log(res);
   };
   return (
     <div className="container py-10">

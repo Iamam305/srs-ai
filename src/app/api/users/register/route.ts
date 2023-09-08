@@ -33,7 +33,7 @@ export async function POST(request: NextRequest) {
     });
 
     const savedUser = await newUser.save();
-    console.log(savedUser);
+    // console.log(savedUser);
 
     //send verification email
 
@@ -45,7 +45,7 @@ export async function POST(request: NextRequest) {
       savedUser,
     });
   } catch (error: any) {
-    console.log(error);
+    // console.log(error);
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }

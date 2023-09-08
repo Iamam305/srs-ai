@@ -19,13 +19,13 @@ const Page = () => {
     try {
       setLoading(true);
       const response = await axios.post("/api/users/login", user);
-      console.log("Login success", response.data);
+      // console.log("Login success", response.data);
       localStorage.setItem("user", JSON.stringify(response.data.user));
       router.push("/srs-documents");
       window.location.reload();
       toast.success("login successfull");
     } catch (error: any) {
-      console.log("Login failed", error.message);
+      // console.log("Login failed", error.message);
 
       toast.error(error.message);
     } finally {

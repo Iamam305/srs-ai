@@ -17,10 +17,10 @@ const Page = () => {
     try {
       setLoading(true);
       const response = await axios.post("/api/srs-document", docsInfo);
-      console.log("creation successfull", response.data);
+      // console.log("creation successfull", response.data);
       router.push(`/srs-documents/${response.data.document._id}`);
     } catch (error: any) {
-      console.log("Creation Unsuccessfull", error.message);
+      // console.log("Creation Unsuccessfull", error.message);
 
       toast.error(error.message);
     } finally {

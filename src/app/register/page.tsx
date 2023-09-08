@@ -20,11 +20,11 @@ const Page = () => {
     try {
       setLoading(true);
       const response = await axios.post("/api/users/register", user);
-      console.log("Signup success", response.data);
+      // console.log("Signup success", response.data);
       router.push("/login");
       toast.success(response.data.message)
     } catch (error: any) {
-      console.log("Signup failed", error.message);
+      // console.log("Signup failed", error.message);
 
       toast.error(error.message);
     } finally {
