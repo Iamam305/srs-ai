@@ -92,7 +92,7 @@ const Page = () => {
         </div>
         <div className="flex items-center justify-center py-4 text-center bg-gray-50 dark:bg-gray-700">
           <span className="text-sm text-gray-600 dark:text-gray-200">
-            Don't have an account?{" "}
+            Don&apos;t have an account?{" "}
           </span>
           <Link
             href="/register"
