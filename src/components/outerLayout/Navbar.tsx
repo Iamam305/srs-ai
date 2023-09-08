@@ -11,17 +11,7 @@ const Navbar = () => {
   const [user, setUser] = useState<string | null>(null);
   const router = useRouter();
   useEffect(() => {
-    const handleStorageChange = () => {
-      setUser(localStorage.getItem("user") || "");
-    };
-
-    // Add event listener for storage changes
-    window.addEventListener("storage", handleStorageChange);
-
-    return () => {
-      // Remove event listener when component is unmounted
-      window.removeEventListener("storage", handleStorageChange);
-    };
+    setUser(localStorage.getItem("user") || "");
   }, []);
 
   const logOut = async () => {
