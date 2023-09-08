@@ -19,6 +19,7 @@ const Navbar = () => {
       const res = await axios.get("/api/users/logout");
       localStorage.removeItem("user");
       router.push("/");
+      window.location.reload()
       toast.success(res.data.message);
     } catch (error: any) {
       toast.success(error.message);

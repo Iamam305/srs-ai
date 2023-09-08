@@ -17,7 +17,7 @@ export const POST = async (req: NextRequest) => {
     const user = await authMiddleware(req);
     const { name, platform, description, features } = await req.json();
 
-    const prompt = `Generate a Software Requirements Specification (Srs) document for a mobile application. The app, named ${name} is designed for ${platform}.Which is ${description} and aims to features of ${features} Please provide detailed requirements, including functional and non-functional aspects, user interfaces, performance expectations, security measures, and any relevant details. If any input appears illogical, it can be ignored. Ensure the Srs document maintains clarity and completeness.`;
+    const prompt = `Generate a Software Requirements Specification (Srs) document for a software application. The app, named ${name} is designed for ${platform}.Which is ${description} and aims to features of ${features} Please provide detailed requirements, including functional and non-functional aspects, user interfaces, performance expectations, security measures, and any relevant details. If any input appears illogical, it can be ignored. Ensure the Srs document maintains clarity and completeness.`;
 
     const response = await openai.chat.completions.create({
       model: "gpt-3.5-turbo-16k",

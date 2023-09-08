@@ -22,6 +22,7 @@ const Page = () => {
       console.log("Login success", response.data);
       localStorage.setItem("user", JSON.stringify(response.data.user));
       router.push("/srs-documents");
+      window.location.reload();
       toast.success("login successfull");
     } catch (error: any) {
       console.log("Login failed", error.message);
