@@ -6,7 +6,7 @@ import React, { useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const [user, setUser] = useState<string | null>(null);
   const router = useRouter();
